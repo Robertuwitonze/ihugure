@@ -383,3 +383,36 @@ function refreshDiv()
 }
 
 
+// Delete examinne
+$(document).on("click", "#deletee", function(e){
+  e.preventDefault();
+  var id = $(this).data("id");
+   $.ajax({
+    type : "post",
+    url : "query/deleteExaminee.php",
+    dataType : "json",  
+    data : {id:id},
+    cache : false,
+    success : function(data){
+      if(data.res == "success")
+      {
+        Swal.fire(
+          'Success',
+          'successfully deleted',
+          'success'
+        )
+        refreshDiv();
+      }
+    },
+    error : function(xhr, ErrorStatus, error){
+      console.log(status.error);
+    }
+
+  });
+  
+ 
+
+  return false;
+});
+
+

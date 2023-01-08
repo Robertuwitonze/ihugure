@@ -51,6 +51,9 @@
                                            <td><?php echo $selExmneRow['exmne_status']; ?></td>
                                            <td>
                                                <a rel="facebox" href="facebox_modal/updateExaminee.php?id=<?php echo $selExmneRow['exmne_id']; ?>" class="btn btn-sm btn-primary">Update</a>
+                                               <button type="button" id="deletee" data-id='<?php echo $selExmneRow['exmne_id']; ?>'   class="btn btn-danger btn-sm">Delete</button>
+
+
 
                                            </td>
                                         </tr>

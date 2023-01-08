@@ -95,31 +95,7 @@
                                         </i>Manage Examinee
                                     </a>
                                 </li>
-                                <li class="app-sidebar__heading">RANKING</li>
-                                <li>
-                                    <a href="home.php?page=ranking-exam">
-                                        <i class="metismenu-icon pe-7s-cup">
-                                        </i>Ranking By Exam
-                                    </a>
-                                </li>
-
-
-                                <li class="app-sidebar__heading">REPORTS</li>
-                                <li>
-                                    <a href="home.php?page=examinee-result">
-                                        <i class="metismenu-icon pe-7s-cup">
-                                        </i>Examinee Result
-                                    </a>
-                                </li>
-                              
-
-                                 <li class="app-sidebar__heading">FEEDBACKS</li>
-                                <li>
-                                    <a href="home.php?page=feedbacks">
-                                        <i class="metismenu-icon pe-7s-chat">
-                                        </i>All Feedbacks
-                                    </a>
-                                </li>
+                                
                                 
                             </ul>
                         </div>

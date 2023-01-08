@@ -41,18 +41,7 @@ if(!isset($_SESSION['admin']['adminnakalogin']) == true) header("location:index.
      {
       include("pages/manage-examinee.php");
      }
-     else if($page == "ranking-exam")
-     {
-      include("pages/ranking-exam.php");
-     }
-     else if($page == "feedbacks")
-     {
-      include("pages/feedbacks.php");
-     }
-     else if($page == "examinee-result")
-     {
-      include("pages/examinee-result.php");
-     }
+     
 
        
    }

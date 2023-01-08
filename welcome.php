@@ -45,7 +45,7 @@
         <ul class="nav navbar-nav navbar-left">
             <li <?php if(@$_GET['q']==1) echo'class="active"'; ?> ><a href="welcome.php?q=1"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;AHABANZA<span class="sr-only">(current)</span></a></li>
             <li <?php if(@$_GET['q']==2) echo'class="active"'; ?>> <a href="welcome.php?q=2"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;IBYO NAKOZE</a></li>
-            <li <?php if(@$_GET['q']==3) echo'class="active"'; ?>> <a href="welcome.php?q=3"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span>&nbsp;IMINOTA</a></li>
+            <li <?php if(@$_GET['q']==3) echo'class="active"'; ?>> <a href="welcome.php?q=3"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span>&nbsp;AMANOTA</a></li>
             
         </ul>
         <ul class="nav navbar-nav navbar-right">
@@ -159,7 +159,7 @@
                 <?php
                     if(@$_GET['q']== 2) 
                     {
-                        $q=mysqli_query($con,"SELECT * FROM history WHERE email='$email' ORDER BY date DESC " )or die('Error197');
+                        $q=mysqli_query($con,"SELECT * FROM history WHERE email='$email' ORDER BY id desc limit 1" )or die('Error197');
                         echo  '<div class="panel title">
                         <table class="table table-striped title1" >
                         <tr style="color:black;"><td><center><b>NOMERO</b></center></td><td><center><b>IKIZAMI</b></center></td><td><center><b>UMUBARE WI IBIBAZO</b></center></td><td><center><b>IBIRIBYO</b></center></td><td><center><b>IBITARIBYO<b></center></td><td><center><b>AMANOTA</b></center></td>';
@@ -176,6 +176,7 @@
                         while($row=mysqli_fetch_array($q23) )
                         {  $title=$row['ex_title'];  }
                         $c++;
+                        
                         echo '<tr><td><center>'.$c.'</center></td><td><center>'.$title.'</center></td><td><center>'.$qa.'</center></td><td><center>'.$r.'</center></td><td><center>'.$w.'</center></td><td><center>'.$s.'</center></td></tr>';
                         }
                         echo'</table></div>';
